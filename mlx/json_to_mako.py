@@ -21,13 +21,13 @@ def json_to_mako_wrapper(args):
     PARSER.add_argument("-v", "--version", action="version", version="%(prog)s " + __version__)
     PARSER.add_argument('-i', '--input', action='append',
                         required=True,
-                        help='Input file: JSON file.')
+                        help='Input file(s): JSON file(s).')
     PARSER.add_argument('-o', '--output', action='store',
                         required=True,
                         help='Output file.')
     GROUP = PARSER.add_mutually_exclusive_group(required=True)
     GROUP.add_argument('-t', '--template', action='store',
-                       help='Custom MAKO template file for which to render the given SEF input.')
+                       help='Custom MAKO template file for which to render the given JSON input.')
     ARGS = PARSER.parse_args(args)
 
     if ARGS.template:
