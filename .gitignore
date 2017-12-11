@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# example output
+example/address-book.html
+tests/address-book.html
