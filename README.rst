@@ -59,13 +59,19 @@ the complexity of 'interpreting' the data is done in the MAKO templates.
 Example
 =======
 
-The usage is explained through an example in the *example/* directory.
-
 General use:
 
-.. code::
+.. code-block:: bash
 
     json-to-mako --input database.json --template rendering.mako --output rendered.html
+
+The MAKO-template should match the dataformat of the JSON input file. The script adds
+
+- a list at the top level: multiple input JSON files are appended to a list,
+- some metadata in order to identify the input source
+
+The usage on how to match the dataformat between JSON and MAKO is explained through an
+example in the *example/* directory.
 
 Multiple input files
 ====================
@@ -73,7 +79,7 @@ Multiple input files
 The `--input` flag can be provided multiple times in order to provide multiple JSON databases. This
 is explained by the example.
 
-.. code::
+.. code-block:: bash
 
     json-to-mako --input database1.json --input database2.json--template rendering.mako --output rendered.html
 

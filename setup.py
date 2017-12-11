@@ -13,7 +13,7 @@ setup(
     url=project_url,
     author='Stein Heselmans',
     author_email='teh@melexis.com',
-    description='Convertor for JSON database(s) to MAKO templated outpu',
+    description='Convertor for JSON database(s) to MAKO templated output',
     long_description=open("README.rst").read(),
     zip_safe=False,
     license='Apache License, Version 2.0',

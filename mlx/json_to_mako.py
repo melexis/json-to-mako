@@ -13,6 +13,27 @@ import sys
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "__version__.py")).read())
 
 
+class InputDatabase(object):
+    '''
+    Store data from input database
+
+    The data is contained in self.data.
+    Some meta information is stored in self.source (path to source json file)
+    and self.name (derived from path to source json file)
+    '''
+    def __init__(self, json):
+        '''
+
+        Args:
+            json: Name of the json file
+        '''
+        self.data = None
+        self.source = json
+        self.name = os.path.splitext(os.path.basename(self.source))[0]
+        with open(json, 'r') as finput:
+            self.data = loads(finput.read())
+
+
 def json_to_mako_wrapper(args):
     '''
     Main entry for json_to_mako
@@ -32,8 +53,8 @@ def json_to_mako_wrapper(args):
 
     database = []
     for inputfile in ARGS.input:
-        with open(inputfile, 'r') as finput:
-            database.append(loads(finput.read()))
+        db = InputDatabase(inputfile)
+        database.append(db)
     tmpl = Template(filename=ARGS.template)
     rendered = tmpl.render(db=database)
     with open(ARGS.output, 'w') as out:
