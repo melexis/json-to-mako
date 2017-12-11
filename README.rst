@@ -36,13 +36,6 @@ JSON to MAKO generator
 
 Python script that converts JSON database(s) to any templated output using MAKO templates.
 
-.. _json_to_mako_goal:
-
-----
-Goal
-----
-
-
 .. _json_to_mako_installing:
 
 ----------
@@ -59,4 +52,30 @@ Installing
 Usage
 -----
 
+The script takes multiple JSON input files, combines them in a python list, and renders the
+data through a provided template. No data-parsing functionality is provided by the script:
+the complexity of 'interpreting' the data is done in the MAKO templates.
 
+Example
+=======
+
+The usage is explained through an example in the *example/* directory.
+
+General use:
+
+.. code::
+
+    json-to-mako --input database.json --template rendering.mako --output rendered.html
+
+Multiple input files
+====================
+
+The `--input` flag can be provided multiple times in order to provide multiple JSON databases. This
+is explained by the example.
+
+.. code::
+
+    json-to-mako --input database1.json --input database2.json--template rendering.mako --output rendered.html
+
+The multiple JSON databases are appended into a python list. Your MAKO-template needs to incorporate this by e.g.
+looping over the different databases. See example/ folder for details.

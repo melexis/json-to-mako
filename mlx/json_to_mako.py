@@ -25,21 +25,16 @@ def json_to_mako_wrapper(args):
     PARSER.add_argument('-o', '--output', action='store',
                         required=True,
                         help='Output file.')
-    GROUP = PARSER.add_mutually_exclusive_group(required=True)
-    GROUP.add_argument('-t', '--template', action='store',
-                       help='Custom MAKO template file for which to render the given JSON input.')
+    PARSER.add_argument('-t', '--template', action='store',
+                        required=True,
+                        help='Custom MAKO template file for which to render the given JSON input.')
     ARGS = PARSER.parse_args(args)
-
-    if ARGS.template:
-        TEMPLATE = ARGS.template
-    else:
-        raise ValueError('No template specified')
 
     database = []
     for inputfile in ARGS.input:
         with open(inputfile, 'r') as finput:
             database.append(loads(finput.read()))
-    tmpl = Template(filename=TEMPLATE)
+    tmpl = Template(filename=ARGS.template)
     rendered = tmpl.render(db=database)
     with open(ARGS.output, 'w') as out:
         out.write(rendered)
