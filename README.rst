@@ -2,32 +2,32 @@
     :target: http://www.apache.org/licenses/LICENSE-2.0
     :alt: Apache2 License
 
-.. image:: https://badge.fury.io/py/mlx.json_to_mako.svg
-    :target: https://badge.fury.io/py/mlx.json_to_mako
+.. image:: https://badge.fury.io/py/mlx.json-to-mako.svg
+    :target: https://badge.fury.io/py/mlx.json-to-mako
     :alt: Pypi packaged release
 
-.. image:: https://travis-ci.org/melexis/json_to_mako.svg?branch=master
-    :target: https://travis-ci.org/melexis/json_to_mako
+.. image:: https://travis-ci.org/melexis/json-to-mako.svg?branch=master
+    :target: https://travis-ci.org/melexis/json-to-mako
     :alt: Build status
 
-.. image:: https://codecov.io/gh/melexis/json_to_mako/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/melexis/json_to_mako
+.. image:: https://codecov.io/gh/melexis/json-to-mako/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/melexis/json-to-mako
     :alt: Code Coverage
 
-.. image:: https://codeclimate.com/github/melexis/json_to_mako/badges/gpa.svg
-    :target: https://codeclimate.com/github/melexis/json_to_mako
+.. image:: https://codeclimate.com/github/melexis/json-to-mako/badges/gpa.svg
+    :target: https://codeclimate.com/github/melexis/json-to-mako
     :alt: Code Climate Status
 
-.. image:: https://codeclimate.com/github/melexis/json_to_mako/badges/issue_count.svg
-    :target: https://codeclimate.com/github/melexis/json_to_mako
+.. image:: https://codeclimate.com/github/melexis/json-to-mako/badges/issue_count.svg
+    :target: https://codeclimate.com/github/melexis/json-to-mako
     :alt: Issue Count
 
-.. image:: https://requires.io/github/melexis/json_to_mako/requirements.svg?branch=master
-    :target: https://requires.io/github/melexis/json_to_mako/requirements/?branch=master
+.. image:: https://requires.io/github/melexis/json-to-mako/requirements.svg?branch=master
+    :target: https://requires.io/github/melexis/json-to-mako/requirements/?branch=master
     :alt: Requirements Status
 
 .. image:: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
-    :target: https://github.com/melexis/json_to_mako/issues
+    :target: https://github.com/melexis/json-to-mako/issues
     :alt: Contributions welcome
 
 ======================
