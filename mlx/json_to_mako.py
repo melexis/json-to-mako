@@ -8,9 +8,24 @@ from argparse import ArgumentParser
 from json import loads
 from mako.template import Template
 import os
+import re
 import sys
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "__version__.py")).read())
+
+
+def to_identifier(name):
+    '''
+    Convert string to identifier
+
+    Removing invalid chars and leading non-letter characters
+
+    Args:
+        name (str): input name
+    Returns
+        str: Valid identifier based on input name
+    '''
+    return re.sub('\W|^(?=\d)', '', name)
 
 
 class InputDatabase(object):
@@ -29,7 +44,7 @@ class InputDatabase(object):
         '''
         self.data = None
         self.source = json
-        self.name = os.path.splitext(os.path.basename(self.source))[0]
+        self.name = to_identifier(os.path.splitext(os.path.basename(self.source))[0])
         with open(json, 'r') as finput:
             self.data = loads(finput.read())
 
