@@ -2,7 +2,7 @@
 
 from setuptools import setup, find_packages
 
-project_url = 'https://github.com/melexis/json_to_mako'
+project_url = 'https://github.com/melexis/json-to-mako'
 exec(open('mlx/__version__.py').read())
 
 requires = ['mako']
